@@ -111,13 +111,13 @@ fit_gradation <- function(gradation_tbl, sizes, method = "SP") {
 
   }
 
-  gradation_tbl$stream <- "lab"
+  gradation_tbl$stream <- "meas"
   gradation_tbl |>
     dplyr::bind_rows(
       data.frame(
         x = sizes,
         y = wp,
-        stream = "curve fit"
+        stream = "fit"
       )
     ) -> gradation_tbl
 
@@ -130,7 +130,7 @@ fit_gradation <- function(gradation_tbl, sizes, method = "SP") {
     ggplot2::labs(
       x     = "sizes, mm",
       y     = "% passing",
-      title = "Size Distribution"
+      title = "Gradation Curve"
     ) +
     ggplot2::theme_light()
 

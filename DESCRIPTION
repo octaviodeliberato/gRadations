@@ -15,3 +15,6 @@ Imports:
     gslnls,
     plotly,
     stats
+Depends: 
+    R (>= 4.1)
+LazyData: true
