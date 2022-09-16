@@ -18,3 +18,5 @@ Imports:
 Depends: 
     R (>= 4.1)
 LazyData: true
+URL: https://github.com/octaviodeliberato/gRadations
+BugReports: https://github.com/octaviodeliberato/gRadations/issues
