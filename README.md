@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of gRadations is to The purpose of gRadations is to allow the
-representation of size distributions by means of curve fitting.
+The goal of gRadations is to allow the representation of size
+distributions by means of curve fitting.
 
 ## Installation
 
@@ -39,7 +39,8 @@ for (i in seq_along(grad_lst)) {
       dplyr::select(x, y),
     sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
               9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
-    method = "SP"
+    method = "SP",
+    .interactive = FALSE
   )
 
 }
@@ -47,10 +48,10 @@ for (i in seq_along(grad_lst)) {
 grad_fit_lst[[1]][["plot_x"]]
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+<img src="man/figures/README-example-1.png" width="90%" />
 
 ``` r
 grad_fit_lst[[1]][["plot_log10_x"]]
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+<img src="man/figures/README-example-2.png" width="90%" />

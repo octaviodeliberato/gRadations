@@ -4,7 +4,7 @@
 \alias{fit_gradation}
 \title{Gradation Curve Fitting}
 \usage{
-fit_gradation(gradation_tbl, sizes, method = "SP")
+fit_gradation(gradation_tbl, sizes, method = "SP", .interactive = TRUE)
 }
 \arguments{
 \item{gradation_tbl}{Gradation table (data frame).}
@@ -12,9 +12,11 @@ fit_gradation(gradation_tbl, sizes, method = "SP")
 \item{sizes}{The sizes to interpolate the \% passing.}
 
 \item{method}{One of "GS" (Gaudin-Schuhmann), "RR" (Rosin-Rammler), "SB" (Swebrec) or splines otherwise.}
+
+\item{.interactive}{Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.}
 }
 \value{
-A vector of passing through percentages.
+A list with the percentages passing through along with plots.
 }
 \description{
 Gradation Curve Fitting
