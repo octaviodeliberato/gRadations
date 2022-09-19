@@ -44,6 +44,50 @@ for (i in seq_along(grad_lst)) {
   )
 
 }
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
+#> Scale for 'x' is already present. Adding another scale for 'x', which will
+#> replace the existing scale.
 
 grad_fit_lst[[1]][["plot_x"]]
 ```

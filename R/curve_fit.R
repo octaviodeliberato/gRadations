@@ -69,10 +69,12 @@ fit_gradation <- function(
 
   names(gradation_tbl) <- c("x", "y")
 
-  x_spline <- stats::splinefun(
-    x = gradation_tbl$y, # % passing
-    y = gradation_tbl$x, # sizes, mm
-    method = "monoH.FC"
+  x_spline <- suppressWarnings(
+    stats::splinefun(
+      x = gradation_tbl$y, # % passing
+      y = gradation_tbl$x, # sizes, mm
+      method = "monoH.FC"
+    )
   )
 
   if (method == "RR") {
@@ -133,6 +135,7 @@ fit_gradation <- function(
     ggplot2::aes(x = x, y = y, colour = stream) +
     ggplot2::geom_line(size = 0.85) +
     ggplot2::scale_color_hue(direction = 1) +
+    ggplot2::xlim(NA, max_x) +
     ggplot2::labs(
       x     = "sizes, mm",
       y     = "% passing",
@@ -144,6 +147,7 @@ fit_gradation <- function(
     ggplot2::aes(x = x, y = y, colour = stream) +
     ggplot2::geom_line(size = 0.85) +
     ggplot2::scale_color_hue(direction = 1) +
+    ggplot2::xlim(NA, max_x) +
     ggplot2::labs(
       x     = "sizes, mm",
       y     = "% passing",
