@@ -58,7 +58,7 @@ swebrec <- function(x, b, xmax, x50) {
 #' @param method One of "GS" (Gaudin-Schuhmann), "RR" (Rosin-Rammler), "SB" (Swebrec) or splines otherwise.
 #' @param .interactive Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.
 #'
-#' @return A list with the percentages passing through along with plots.
+#' @return A list with the percentages passing (y) and retained (r) along with size distribution plots.
 #' @export
 fit_gradation <- function(
     gradation_tbl,
@@ -68,6 +68,13 @@ fit_gradation <- function(
 ) {
 
   names(gradation_tbl) <- c("x", "y")
+
+  if (utils::tail(gradation_tbl$x, 1) != 0) {
+
+    gradation_tbl <- dplyr::bind_rows(gradation_tbl,
+                                      dplyr::tibble(x = 0, y = 0))
+
+  }
 
   x_spline <- suppressWarnings(
     stats::splinefun(
@@ -119,15 +126,19 @@ fit_gradation <- function(
 
   }
 
-  gradation_tbl$stream <- "meas"
-  gradation_tbl |>
+  gradation_tbl <- gradation_tbl |>
+    dplyr::mutate(stream = "meas", r = 100.0 - y)
+
+  gradation_tbl <- gradation_tbl |>
     dplyr::bind_rows(
       data.frame(
         x = sizes,
         y = wp,
+        r = 100.0 - wp,
         stream = "fit"
       )
-    ) -> gradation_tbl
+    ) |>
+    dplyr::relocate(stream, .after = dplyr::last_col())
 
   max_x <- sizes[which(wp < 100)[1] - 1]
 

@@ -16,7 +16,7 @@ fit_gradation(gradation_tbl, sizes, method = "SP", .interactive = TRUE)
 \item{.interactive}{Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.}
 }
 \value{
-A list with the percentages passing through along with plots.
+A list with the percentages passing (y) and retained (r) along with size distribution plots.
 }
 \description{
 Gradation Curve Fitting

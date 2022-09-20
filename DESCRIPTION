@@ -14,7 +14,8 @@ Imports:
     ggplot2,
     gslnls,
     plotly,
-    stats
+    stats,
+    utils
 Depends: 
     R (>= 4.1)
 LazyData: true
