@@ -4,6 +4,8 @@
 # gRadations: Dealing with Size Distributions
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/octaviodeliberato/gRadations/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/octaviodeliberato/gRadations/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of gRadations is to allow the representation of size
@@ -44,50 +46,6 @@ for (i in seq_along(grad_lst)) {
   )
 
 }
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
-#> Scale for 'x' is already present. Adding another scale for 'x', which will
-#> replace the existing scale.
 
 grad_fit_lst[[1]][["plot_x"]]
 ```
