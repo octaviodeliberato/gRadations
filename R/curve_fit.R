@@ -127,7 +127,8 @@ fit_gradation <- function(
   }
 
   gradation_tbl <- gradation_tbl |>
-    dplyr::mutate(stream = "meas", r = 100.0 - y)
+    dplyr::mutate(stream = "meas", r = 100.0 - y) |>
+    dplyr::arrange(dplyr::desc(x))
 
   gradation_tbl <- gradation_tbl |>
     dplyr::bind_rows(
@@ -136,9 +137,9 @@ fit_gradation <- function(
         y = wp,
         r = 100.0 - wp,
         stream = "fit"
-      )
-    ) |>
-    dplyr::relocate(stream, .after = dplyr::last_col())
+      ) |>
+        dplyr::arrange(dplyr::desc(x))
+    )
 
   max_x <- sizes[which(wp < 100)[1] - 1]
 
