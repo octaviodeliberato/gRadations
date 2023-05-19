@@ -64,7 +64,7 @@ test_that("Spline works 1", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = c("data", "plot_x", "plot_log10_x")
   )
@@ -77,7 +77,7 @@ test_that("RR works 1", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "RR",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = c("data", "plot_x", "plot_log10_x")
   )
@@ -90,7 +90,7 @@ test_that("Spline works 2", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = c("data", "plot_x", "plot_log10_x")
   )
@@ -103,7 +103,7 @@ test_that("RR works 2", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "RR",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = c("data", "plot_x", "plot_log10_x")
   )
@@ -116,14 +116,14 @@ test_that("These should be equivalent 1", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = fit_gradation(
       gradation_tbl = grad_2_tbl,
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     )
   )
 })
@@ -135,14 +135,14 @@ test_that("These should be equivalent 2", {
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     ),
     expected = fit_gradation(
       gradation_tbl = grad_1_tbl,
       sizes = c(692, 300, 125, 88.9, 63.5, 44.4, 31.7, 19.1, 12.7,
                 9.52, 6.35, 4.76, 2.38, 1.19, 0.59, 0.297, 0.149, 0.074),
       method = "SP",
-      .interactive = FALSE
+      plotly = FALSE
     )
   )
 })

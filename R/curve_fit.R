@@ -56,7 +56,7 @@ swebrec <- function(x, b, xmax, x50) {
 #' @param gradation_tbl Gradation table (data frame).
 #' @param sizes The sizes to interpolate the % passing.
 #' @param method One of "GS" (Gaudin-Schuhmann), "RR" (Rosin-Rammler), "SB" (Swebrec) or splines otherwise.
-#' @param .interactive Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.
+#' @param plotly Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.
 #'
 #' @return A list with the percentages passing (y) and retained (r) along with size distribution plots.
 #' @export
@@ -64,7 +64,7 @@ fit_gradation <- function(
     gradation_tbl,
     sizes,
     method = "SP",
-    .interactive = TRUE
+    plotly = TRUE
 ) {
 
   names(gradation_tbl) <- c("x", "y")
@@ -168,7 +168,7 @@ fit_gradation <- function(
     ggplot2::theme_light() +
     ggplot2::scale_x_log10()
 
-  if (.interactive) {
+  if (plotly) {
 
     grad <- list(data = gradation_tbl, plot_x = plotly::ggplotly(g),
                  plot_log10_x = plotly::ggplotly(gl))

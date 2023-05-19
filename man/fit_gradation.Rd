@@ -4,7 +4,7 @@
 \alias{fit_gradation}
 \title{Gradation Curve Fitting}
 \usage{
-fit_gradation(gradation_tbl, sizes, method = "SP", .interactive = TRUE)
+fit_gradation(gradation_tbl, sizes, method = "SP", plotly = TRUE)
 }
 \arguments{
 \item{gradation_tbl}{Gradation table (data frame).}
@@ -13,7 +13,7 @@ fit_gradation(gradation_tbl, sizes, method = "SP", .interactive = TRUE)
 
 \item{method}{One of "GS" (Gaudin-Schuhmann), "RR" (Rosin-Rammler), "SB" (Swebrec) or splines otherwise.}
 
-\item{.interactive}{Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.}
+\item{plotly}{Returns either a static (ggplot2) visualization or an interactive (plotly) visualization.}
 }
 \value{
 A list with the percentages passing (y) and retained (r) along with size distribution plots.
